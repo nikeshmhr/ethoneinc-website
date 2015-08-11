@@ -1,0 +1,175 @@
+/* CSS Document */
+
+/*html, body {
+ min-width: 800px;
+ }*/
+ 
+ @font-face{
+	font-family: 'Verdana';
+	src: url('../font/Verdana.ttf');
+	font-weight: normal;
+	font-style: normal;
+ }
+* {
+	font-family: 'Verdana';
+}
+
+#pagedown {
+	display: inline-block;
+	position: absolute;
+	bottom: 30%;
+}
+
+#mainPage {
+	background: url(../images/mainpage.jpg) no-repeat;
+	background-size: cover;
+	height: 600px;
+	position: relative;
+}
+
+#mainContentTop {
+	float: right;
+	background: rgba(206, 206, 206, 0.9);
+}
+
+.slogan {
+	color: green;
+	font-size: 20px;
+}
+
+#mainContentBottom {
+	background: rgba(106, 106, 106, 0.9);
+	float: right;
+	margin-top: 20px;
+}
+
+#nav {
+	width: 100%;
+	background-color: rgb(17, 111, 1);
+	position: fixed;
+	z-index: 2;
+	opacity: 0.5;
+	-webkit-transition: opacity 1s; /* Safari */
+	transition: opacity 1s;
+}
+#nav:hover {
+	opacity: 1;
+	-webkit-transition: opacity 1s; /* Safari */
+	transition: opacity 1s;
+}
+
+#nav ul {
+	list-style-type: none;
+}
+
+#nav ul li {
+	float: left;
+	padding: 20px;
+	margin: 0 10px;
+}
+
+#nav ul li a:link, a:visited {
+	text-decoration: none;
+	font-family: "Calibri", "Arial";
+	color: white;
+	font-weight: bold;
+}
+
+#nav ul li a:hover {
+	color: rgb(209, 209, 209);
+}
+
+#services {
+	background-color: rgb(232, 232, 232);
+	padding-bottom: 20px;
+}
+
+#services h1 {
+	color: rgb(27, 109, 25);
+	padding: 50px 50px 5px;
+	font-size: 5em;
+	margin-left: 40%;
+}
+
+#services p {
+	margin-left: 40%;
+	padding: 10px 0 10px 50px;
+	font-size: 1.2em;
+	line-height: 150%;
+}
+
+#services #ideas {
+	padding: 60px 10px;
+}
+
+/** For the background image of team **/
+.member {
+	float: left;
+	width: 33.33%;
+}
+
+#the_team{
+	background-image: url(../images/team.jpg);
+	background-repeat: no-repeat;
+	//opacity: 0.8;
+	background-size: 100%;
+	padding: 8%;	
+	z-index: 2;
+}
+
+#the_team h1 {
+	padding: 30px;
+	background-color: rgba(232, 232, 232, 0.4);
+	color: white;
+	text-align: center;
+	font-size: 5em;
+	width: 6em;
+	margin: 0 auto;
+}
+
+a:link.button, a:hover.button {
+	padding: 1.1em 1.9em;
+	background: black;
+	opacity: 0.8;
+	text-align: center;
+	font-style: normal;
+	font-weight: strong;
+	color: white;
+	margin: 0 47%;
+	cursor: pointer;
+	z-index: 3;
+	text-decoration: none;
+}
+
+p.clear {
+	margin: 0;
+	padding: 0;
+	clear: both;
+	height: 0;
+}
+
+#research {
+	background: url(../images/research_bg.jpg) lightgrey;
+	background-repeat: no-repeat;
+	height: 800px;
+	position: relative;
+}
+
+#research h1 {
+	color: white;
+	font-size: 7em;
+	padding-top: 2em;
+	text-align: center;
+	text-shadow: 4px 4px 10px black;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 915px) {
+	#nav {
+		width: 50%;
+	}
+	#nav ul li {
+		width: 100%;
+	}
+
+}

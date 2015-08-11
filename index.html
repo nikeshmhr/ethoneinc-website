@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Company</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js" ></script>
+
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+
+		<script type="text/javascript" src="js/functions.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+				$(document).keydown(function(key) {
+					var imageHeight = $("#intro").height();
+					var keyPressed = key.keyCode;
+					if ((pageYOffset == 0 || pageYOffset < imageHeight ) && keyPressed == 40) {// keyCode for down key is 40
+						onePageScroll('down');
+					}
+				});
+				/*var lastScrollTop = 0;
+				$(document).scroll(function() {
+				var imageHeight = $("#intro").height();
+				var st = $(this).scrollTop();
+				//alert(st);
+				if(st > lastScrollTop){
+				onePageScroll();
+				}else{
+				}
+				lastScrollTop = st;
+				/*
+				if(pageYOffset == 0 || pageYOffset < imageHeight ){
+				onePageScroll();
+				}*/
+				//});
+
+				$("#intro").on('DOMMouseScroll mousewheel', function(event) {
+					var imageHeight = $("#intro").height();
+					if (event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0) {//alternative options for wheelData: wheelDeltaX & wheelDeltaY
+						//scroll down
+						if ((pageYOffset >= 0 && pageYOffset <= imageHeight)) {
+							//console.log('Down');
+							//console.log(pageYOffset >= 0 && pageYOffset < imageHeight);
+							onePageScroll('down');
+						}
+					} else if ((pageYOffset < imageHeight)) {
+						//scroll up
+						//console.log('Up');
+						onePageScroll('up');
+					}
+					//prevent page fom scrolling
+					return false;
+				});
+				$('a[href^="#"]').on('click', function(e) {
+					e.preventDefault();
+
+					var target = this.hash;
+					var $target = $(target);
+
+					$('html, body').stop().animate({
+						'scrollTop' : $target.offset().top
+					}, 900, 'swing', function() {
+						window.location.hash = target;
+					});
+				});
+
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<!-- START OF NAVIGATION -->
+		<div id="nav">
+			<ul>
+				<li>
+					<a href="index.html"><img src="images/logo.png" width="40"  title="Home" /></a>
+				</li>
+				<li>
+					<a href="#mainPage">About</a>
+				</li>
+				<li>
+					<a href="#services">Services</a>
+				</li>
+				<li>
+					<a href="#the_team">Meet the Team</a>
+				</li>
+				<li>
+					<a href="#research">Research</a>
+				</li>
+				<li>
+					<a href="#blog">Blogs</a>
+				</li>
+				<li>
+					<a href="#portfolio">Portfolio</a>
+				</li>
+				<li>
+					<a href="#contact">Contact</a>
+				</li>
+			</ul>
+		</div>
+		<!-- END OF NAVIGATION -->
+
+		<!-- THE ARROW THINGY -->
+		<div class="col-md-12" id="intro">
+			<img src="images/Blurred-Background.jpg" width="100%" alt="Rendron Animation..." />
+			<a href="#mainPage" style="margin-left:50%;"><img src="images/downarrow.png" width="50" id="pagedown" onMouseOver="loadArrow(2)" onMouseOut="loadArrow(1)"/></a>
+		</div>
+
+		<!-- START OF CONTAINER -->
+		<div class="container-fluid" style="width: 100%">
+			<!-- START OF MAIN PAGE -->
+			<div id="mainPage" id="about" class="col-sm-12">
+				<div class="col-md-10" id="mainContentTop">
+					<div style="float:left;" class="col-md-5">
+						<h1 style="color:white;padding: 10px;font-size: 5em;letter-spacing:15px;"><strong>rendron</strong></h1>
+					</div>
+					<div style="float:right;padding: 15px;color: green;" class="col-md-7">
+						<span class="slogan">Welcome to Rendron</span>
+						<br/>
+						<span class="slogan" style="margin-left:20px;">where the geometry of technology</span>
+						<br/>
+						<span class="slogan"style="margin-left:50px;">meets the intangible beauty of art.</span>
+					</div>
+				</div>
+
+				<div class="col-md-8" id="mainContentBottom">
+					<h1 style="color:white;padding: 10px;font-size: 5em;letter-spacing:15px;"><strong>inc.</strong></h1>
+				</div>
+			</div>
+			<!-- END OF MAINPAGE -->
+
+			<!-- START OF SERVICE -->
+			<div id="services" class="col-sm-12">
+				<div class="col-md-8">
+					<h1>What we
+					<br/>
+					<span style="color: #9edb66">do</span></h1>
+					<p>
+						What we do is simple &mdash; We
+						<br/>
+						bring ideas to life...
+						<br/>
+						We nurture creativity with hard work...
+					</p>
+					<p>
+						Working together with us, we
+						<br/>
+						<span style="letter-spacing:5px">can create something</span> beautiful!
+					</p>
+				</div>
+				<div class="col-md-4" id="ideas">
+					<img src="images/service_pic1.png" alt="Ideas to life..." />
+					<br/>
+					<span style="font-family: Sweetly Broken; font-size:180%;letter-spacing:2px;">We bring ideas to <span style="font-family: Helvetica">Life</span></span><img src="images/service_arrow.png" alt="arrow_image" />
+				</div>
+				<a href="#" class="button">More</a>
+			</div>
+			<!-- END OF SERVICE -->
+			
+			<p class="clear" />
+			
+			<!-- START OF MEET THE TEAM -->
+			<div id="the_team">
+				
+				<!--	<img src="images/bipal.jpg" class="member" />
+					<img src="images/nikesh.jpg" class="member" />
+					<img src="images/jena.jpg" class="member" /> 
+				
+				<p class="clear" />-->
+				<a href="#" class="button">MEET</a>
+				<span> <h1>THE <span style="color: rgb(27, 109, 25);">TEAM</span> </h1></span>
+			</div>
+			<!-- END OF MEET THE TEAM -->
+			
+			<!-- START OF RESEARCH -->
+			<div id="research">
+				<h1>Behind the <br/>Scenes</h1>
+				<p class="clear" />
+				<a href="#" class="button" style="margin: 0;display:inline-block;width:200px;margin-left:43%;margin-top:20px;">see how we do what we do best</a>
+			</div>
+			<!-- END OF RESEARCH -->
+
+		</div>
+		<!-- END OF CONTAINER -->
+		<div style="height: 200px;">
+			
+		</div>
+	</body>
+</html>
