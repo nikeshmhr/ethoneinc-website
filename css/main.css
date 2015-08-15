@@ -1,17 +1,7 @@
 /* CSS Document */
 
-/*html, body {
- min-width: 800px;
- }*/
- 
- @font-face{
-	font-family: 'Verdana';
-	src: url('../font/Verdana.ttf');
-	font-weight: normal;
-	font-style: normal;
- }
-* {
-	font-family: 'Verdana';
+html {
+	font-family: Century Gothic, sans-serif;
 }
 
 #pagedown {
