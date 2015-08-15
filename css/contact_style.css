@@ -12,17 +12,16 @@
 /*div to hold the background image*/
 .img_letstalk
 {
+	background: url(../images/contact_us.jpg) no-repeat;
+	padding: 20px;
 	margin-top: 0px;
-	position: absolute;
-	width: 100%;
-/*	background: url(../images/contact_us.jpg);*/
 }
 /*The background image display and width*/
-.img_letstalk img
+/*.img_letstalk img
 {
 	display:block;
 	width: 100%;
-}
+}*/
 
 /*user_form_container is the transparent div that holds another div*/
 .user_form_container
@@ -83,6 +82,7 @@
 {
 	margin-top: 2px;
 	margin-left: 50px;
+	display: inline-block;
 }
 
 /*For all the input types - textboxes and submit button - general specifications*/
