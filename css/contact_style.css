@@ -1,0 +1,155 @@
+/*for all page body*/
+/*body
+{
+	margin: 0;
+	padding: 0;
+	background: #d3d3d3;
+	font-family: Century Gothic, sans-serif, helvetica, arial;
+	color: #00750f;	
+}
+*/
+
+/*div to hold the background image*/
+.img_letstalk
+{
+	margin-top: 0px;
+	position: absolute;
+	width: 100%;
+/*	background: url(../images/contact_us.jpg);*/
+}
+/*The background image display and width*/
+.img_letstalk img
+{
+	display:block;
+	width: 100%;
+}
+
+/*user_form_container is the transparent div that holds another div*/
+.user_form_container
+{
+	position: relative;
+	z-index: 1;
+	background: #fff;
+	margin-top: 90px;
+	margin-left: 40px;
+	width: 600px;
+	height: 500px;
+	padding: 20px;
+	opacity: 0.85;
+}
+
+/*user_form is the div that holds the form*/
+.user_form
+{
+	z-index: 2;
+	margin-top: 20px;
+	width: 650px;
+	height: 500px;
+	padding: 20px;
+	font-size: 14;
+	opacity: 1;
+}
+
+/*For the text spans (labels) inside user_form div */
+.user_form span
+{
+	letter-spacing: 8px;
+	margin-top: 10px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	border: none;
+	background: none;
+	font-weight: 500;
+	display: block;
+	font-size: 20px;
+	height: 20px;
+}
+/*specification for the "Give us a Buzz" header*/
+#contact_head
+{
+	margin-top: 1px;
+	font-size: 65px;
+	letter-spacing: 2px;
+	margin-bottom: 15px;
+}
+/*specification for the "And we'll get right back at you"*/
+#contact_bod_one
+{
+	margin-top: 45px;
+	margin-left: 50px;
+}
+/*specification for "Do introduce yourself though"*/
+#contact_bod_two
+{
+	margin-top: 2px;
+	margin-left: 50px;
+}
+
+/*For all the input types - textboxes and submit button - general specifications*/
+.user_form input
+{
+	border: black;
+	background: #d3d3d3;
+	font-weight: 300;
+	font-family: helvetica;
+	font-size: 25px;
+	font-style: italic;
+	display: block;
+	height: 30px;
+	outline: black;
+	margin: auto;
+	margin-left: 50px;
+	margin-top: 7px;
+	padding: 6px 12px 6px 12px;
+}
+/*specified increase height for the "Say What's up" text field*/
+.user_form input[name="desc"]
+{
+	height: 120px;
+}
+
+
+/* This is for placeholders color - with compatibility for different browsers.*/
+::-webkit-input-placeholder
+{
+color: #fff;
+opacity: 1;
+letter-spacing: 3px;
+}
+
+:-moz-placeholder
+{ /* older Firefox*/
+color: #fff;
+opacity: 1;
+letter-spacing: 3px;
+}
+::-moz-placeholder 
+{/* Firefox 19+ */ 
+color: #fff; 
+opacity: 1;
+letter-spacing: 3px;
+}
+
+:-ms-input-placeholder
+{ 
+color: #fff;
+opacity: 1;
+letter-spacing: 3px;
+}
+/*Placeholder formate with compatibility up until here*/
+
+
+/*Submit button format and specification*/
+.user_form input[type="submit"]
+{
+	width: 150px;
+	height: 50px;
+	background: black;
+	opacity: 0.9;
+	text-decoration: right;
+	color: white;
+	margin-top: 5px;
+	cursor: pointer;
+	margin-left: 390px;
+	font-style: normal;
+}
