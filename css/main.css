@@ -1,7 +1,16 @@
 /* CSS Document */
 
+
 html {
-	font-family: Century Gothic, sans-serif;
+	font-family: Century Gothic, sans-serif, helvetica, Arial;
+}
+
+body {
+	font-family: Century Gothic, sans-serif, helvetica, Arial;
+	margin: 0;
+	padding: 0;
+	color: #00750f;
+
 }
 
 #pagedown {
