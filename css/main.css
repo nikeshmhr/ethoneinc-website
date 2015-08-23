@@ -148,14 +148,14 @@ p.clear {
 	height: 0;
 }
 
-#research {
+#backstage {
 	background: url(../images/research_bg.jpg) lightgrey;
 	background-repeat: no-repeat;
 	height: 800px;
 	position: relative;
 }
 
-#research h1 {
+#backstage h1 {
 	color: white;
 	font-size: 7em;
 	padding-top: 2em;
