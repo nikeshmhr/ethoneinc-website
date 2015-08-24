@@ -10,7 +10,7 @@ body {
 	margin: 0;
 	padding: 0;
 	color: #00750f;
-
+	background:black;
 }
 
 #pagedown {
@@ -25,6 +25,8 @@ body {
 	background-size: cover;
 	height: 600px;
 	position: relative;
+	padding: 100px;
+	margin-top: 20px;
 }
 
 #mainContentTop {
@@ -81,7 +83,9 @@ body {
 
 #services {
 	background-color: rgb(232, 232, 232);
+	padding: 50px;
 	padding-bottom: 20px;
+	margin-top: 20px;
 }
 
 #services h1 {
@@ -115,6 +119,7 @@ body {
 	background-size: 100%;
 	padding: 8%;	
 	z-index: 2;
+	margin-top: 20px;
 }
 
 #the_team h1 {
@@ -153,6 +158,7 @@ p.clear {
 	background-repeat: no-repeat;
 	height: 800px;
 	position: relative;
+	margin-top: 20px;
 }
 
 #backstage h1 {
@@ -162,6 +168,31 @@ p.clear {
 	text-align: center;
 	text-shadow: 4px 4px 10px black;
 	margin: 0 auto;
+}
+
+#footer {
+	width: 100%;
+	position: relative;
+	margin-top: 20px;
+}
+.box {
+	width: 32%;	/*will be 30% of #footer */
+	color: rgb(195, 195, 195);
+	float: left;	
+	background-color: grey;
+}
+
+.box h3{
+	/*border: 1px solid red;*/
+	font-size: 2em;
+	color: rgb(195, 195, 195);
+	padding: 15px 0;
+	text-align: center;
+	margin: auto;
+}
+.box .content{
+	height: 400px;
+	display: none;
 }
 
 @media screen and (max-width: 915px) {
