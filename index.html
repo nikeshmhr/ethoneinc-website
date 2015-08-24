@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Company</title>
+		<title>Ethone Inc.</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<script type="text/javascript" src="js/jquery.js"></script>
 		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js" ></script>
 
+		<link rel="icon" type="image/png" href="images/logo.png" />
+		
 		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
 		<!-- <link rel="stylesheet" type="text/css" href="css/reset.css" /> -->
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
@@ -68,6 +70,15 @@
 					}, 900, 'swing', function() {
 						window.location.hash = target;
 					});
+				});
+
+				$('.box').mouseover(function(e){
+					//e.target.innerHTML = "hey";
+					var targetElement = e.target;
+					targetElement.css("color", "blue");
+				});
+				$('.box').mouseout(function(e){
+					//alert('out');
 				});
 
 			});
@@ -209,7 +220,7 @@
 									<td><input type="text" name="name" placeholder="Your Name Please!" size="35" required /></td>
 								</tr>
 								<tr>
-									<td><input type="text" name="email" placeholder="Email ID" size="35" required /></td>
+									<td><input type="email" name="email" placeholder="Email ID" size="35" required /></td>
 								</tr>
 								<tr>
 									<td><input type="text" name="desc" placeholder="Say what's up!" size="35" required /></td>
@@ -226,10 +237,35 @@
 			</div>		
 			<!-- END OF CONTACT US -->
 			
+			<!-- START OF FOOTER -->
+			<div id="footer">
+				<div class="box" id="leftBox" style="margin-right: 1%;">
+					<h3 style="margin:0;padding:30px; background-color: #108081;">Disclaimer:</h3>
+					<div class="content">
+						<!-- CONTENT GOES HERE -->
+					</div>
+				</div>
+				<div class="box" style="margin: 0 1%;">
+					<h3 style="background-color: #333333;">If you wanna find us,<br/>Here is a <u>map<u>:</h3>
+					<div class="content">
+						<!-- CONTENT GOES HERE -->
+					</div>
+				</div>
+				<div class="box" style="margin-left: 1%; ">
+					<h3 style="background-color: #420058;">Call, email...<br/>&nbsp;Catch us:</h3>
+					<div class="content">
+						<!-- CONTENT GOES HERE -->
+					</div>
+				</div>
+				<p class="clear" />
+			</div>
+			<!-- END OF FOOTER -->
+
 		</div>
-		<!-- END OF CONTAINER -->
-		<div style="height: 200px;">
-			
+		<!-- END OF CONTAINER -->		
+
+		<div style="height: 200px;border:1px solid red;">
+			restricted area
 		</div>
 		
 		<!-- ADDED COMMENT -->
