@@ -172,14 +172,19 @@ p.clear {
 
 #footer {
 	width: 100%;
+	height: 500px;
 	position: relative;
 	margin-top: 20px;
+	border: 1px solid blue;
 }
 .box {
 	width: 32%;	/*will be 30% of #footer */
 	color: rgb(195, 195, 195);
 	float: left;	
 	background-color: grey;
+	position: absolute;
+	bottom: 0;
+	z-index: 5;
 }
 
 .box h3{
@@ -191,8 +196,7 @@ p.clear {
 	margin: auto;
 }
 .box .content{
-	height: 400px;
-	display: none;
+	height:0px;
 }
 
 @media screen and (max-width: 915px) {

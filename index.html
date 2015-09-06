@@ -43,6 +43,7 @@
 				//});
 
 				$("#intro").on('DOMMouseScroll mousewheel', function(event) {
+					event.stopPropagation();
 					var imageHeight = $("#intro").height();
 					if (event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0) {//alternative options for wheelData: wheelDeltaX & wheelDeltaY
 						//scroll down
@@ -72,13 +73,20 @@
 					});
 				});
 
-				$('.box').mouseover(function(e){
-					//e.target.innerHTML = "hey";
-					var targetElement = e.target;
-					targetElement.css("color", "blue");
+				$('.box').click(function(event){
+					event.preventDefault();
+					event.stopPropagation();
+					if(event.isPropagationStopped()){
+						$(this).children(".content").animate({height: '400px', top: '-400px'}, 200, function(){console.log('Over')});
+					}					
+					//var targetElement = e.target;					
 				});
-				$('.box').mouseout(function(e){
-					//alert('out');
+
+				$('.box').mouseout(function(event){
+					event.stopPropagation();
+					if(event.isPropagationStopped()){
+						$(this).children(".content").animate({height: '0px', top: '400px'}, 200, function(){console.log('Out')});
+					}
 				});
 
 			});
@@ -239,19 +247,19 @@
 			
 			<!-- START OF FOOTER -->
 			<div id="footer">
-				<div class="box" id="leftBox" style="margin-right: 1%;">
+				<div class="box" style="margin-right: 1%;left:0%">
 					<h3 style="margin:0;padding:30px; background-color: #108081;">Disclaimer:</h3>
 					<div class="content">
 						<!-- CONTENT GOES HERE -->
 					</div>
 				</div>
-				<div class="box" style="margin: 0 1%;">
-					<h3 style="background-color: #333333;">If you wanna find us,<br/>Here is a <u>map<u>:</h3>
+				<div class="box" style="margin-right: 1%; margin-left: 1%; left:33%">
+					<h3 style="background-color: #333333;">If you wanna find us,<br/>Here is a <u>map</u>:</h3>
 					<div class="content">
 						<!-- CONTENT GOES HERE -->
 					</div>
 				</div>
-				<div class="box" style="margin-left: 1%; ">
+				<div class="box" style="margin-left: 1%;left: 67%">
 					<h3 style="background-color: #420058;">Call, email...<br/>&nbsp;Catch us:</h3>
 					<div class="content">
 						<!-- CONTENT GOES HERE -->
@@ -260,7 +268,6 @@
 				<p class="clear" />
 			</div>
 			<!-- END OF FOOTER -->
-
 		</div>
 		<!-- END OF CONTAINER -->		
 
